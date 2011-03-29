@@ -20,10 +20,12 @@ The most common way to install node.js is to directly compile it from the downlo
 
 You can get the latest source code from nodejs.org^. After you have downloaded the archive, you simply install node.js by typing the following commands into your terminal:
 
-tar -xzf node.tar.gz ^
-cd node
-./configure
-sudo make install
+~~~ {.shell}
+$ tar -xzf node.tar.gz ^
+$ cd node
+$ ./configure
+$ sudo make install
+~~~
 
 Node.js itself has no external dependencies except common build tools as well as pythons for the build system itself. On OSX you must install XCode for this to work, and on Ubuntu you probably have to run `apt-get -y install buildessentials`^.
 
@@ -31,9 +33,11 @@ Node.js itself has no external dependencies except common build tools as well as
 
 If everything worked, you should be able to invoke the interactive node.js shell like this:
 
-node
+~~~ {.shell}
+$ node
 > console.log('Hello World');
 Hello World
+~~~
 
 The interactive shell (also called REPL) is a great place to test simple oneliners, and can also be directly embedded into your node.js applications. In order to get out of it, simply press Ctrl + C.
 
@@ -43,17 +47,22 @@ The REPL also comes with many other great features, most importantly tab auto-co
 
 Writing a node.js program is as simple as creating a new file with a '.js' extension. For example you could create a simple 'hello_world.js' file with the following content:
 
+~~~ {.javascript}
 console.log('Hello World');
+~~~
 
 After you have saved the file, you can execute it from your terminal like so:
 
+~~~ {.shell}
 node hello.js
 Hello World
+~~~
 
 ### A hello world http server
 
 Now printing hello world to a terminal isn't all that exciting. Let's take the next step and write a program that responds to hello world via http. We'll call the file 'hello_http.js' and put the following code into it:
 
+~~~ {.javascript}
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
@@ -61,10 +70,11 @@ var server = http.createServer(function(req, res) {
   res.end('Hello Http');
 });
 server.listen(8080);
+~~~
 
 Now lets run this program from the terminal by typing:
 
-node hello_http.js
+    node hello_http.js
 
 The first thing you'll notice is that this program, unlike our first one, doesn't exit right away. That's because a node program will always run until it's certain that there are no events to be possible. In this case the open http server is the source of events that keeps things going.
 
@@ -72,8 +82,8 @@ Testing the server is as simple as opening a new browser tab, and navigating to 
 
 Alternatively, you could also open up a new terminal and use curl to test your server:
 
-curl localhost:8080
-Hello Http
+    curl localhost:8080
+    Hello Http
 
 Now let's have a closer look at the steps involved in our little program. In the first line, we include the http core module and assign it to a variable called http. You will find more information on this in the next section about the module system.
 
@@ -89,37 +99,47 @@ In order to structure your program into different files, node.js provides you wi
 
 To illustrate the approach, let's create a new file called 'main.js' with the following content:
 
+~~~ {.javascript}
 var hello = require('./hello');
 hello.world();
+~~~
 
 As you have probably guessed, the `require('./hello')` is used to import the contents from another JavaScript file. The initial './' indicates that the file is located in the same directory 'main.js'. Also note that you don't have to provide the file extension, as '.js' is assumed by default.
 
 So let's go ahead and create our 'hello.js' file, with the following content:
 
+~~~ {.javascript}
 exports.world = function() {
   console.log('Hello World');
 }
+~~~
 
 What you notice here, is that we are assigng a property called 'world' to an object called 'exports'. Such an 'exports' object is available in every module, and it is returned whenever the `require` function is used to include the module. If we now go ahead and run our 'main.js' program, we will see the expected output:
 
-node main.js
-Hello World
+    node main.js
+    Hello World
 
 At this point it should also be mentioned that many node users are overwriting the exports object directly like so:
 
+~~~ {.javascript}
 module.exports = function() {
   // ...
 }
+~~~
 
 As you might have expected, this will directly cause the `require` function to return the assigned function. This use useful if you're doing object oriented programming^, where each file exports the constructor of one class.
 
 The next thing you need to know about the module system is how it deals with `require` calls that don't include a relative hint about the location of the included file. Take for example:
 
+~~~ {.javascript}
 var http = require('http');
+~~~
 
 What node.js will do in this case, is to first look if there is a core module named http, and since that's the case, return that directly. But what about non-core modules, such as 'mysql'?
 
+~~~ {.javascript}
 var mysql = require('mysql');
+~~~
 
 In this case node.js will look at every directory, beginning with the one of the current file, and check if there is a folder called 'node_modules'. If such a folder is found, node.js will look into this folder for a file called 'mysql.js'. If no matching file is found and the directory root '/' is reached, node.js will give up and throw an exception.
 
@@ -133,6 +153,7 @@ Node.js implements the oberservable pattern^ using a class called EventEmitter. 
 
 Using EventEmitter's is pretty forward. You can listen to a specific event by calling the 'on()' function on your object, providing the name of the event, as well as a callback closure as the parameters. For example:
 
+~~~ {.javascript}
 var data = '';
 req
   .on('data', function(chunk) {
@@ -141,6 +162,7 @@ req
   .on('end', function() {
     console.log('POST data: %s', data);
   })
+~~~
 
 As you can see, the `on()` function also returns a reference to the object it belongs to, allowing you to chain several of such event listerns.
 
@@ -148,12 +170,15 @@ If you're only interested in the first occurence of an event, you can use the `o
 
 Finally, you can remove event listeners by using the `removeListener`^ function. Please note that the argument to this function is a reference to the callback you are trying to remove, no the name of the event:
 
+~~~ {.javascript}
 var onData = function(chunk) {
   console.log(chunk);
   req.removeListener(onData);^
 }
 
 req.on('data', onData);
+~~~
+
 
 The example above is essentially identical to the `once()` function.
 
@@ -171,19 +196,23 @@ However, if you find yourself in a situation where you need to locate a tricky b
 
 The easiest way to understand a problem is by inspecting objects using console.log(). You can either directly pass in objects as parameters:
 
+~~~ {.javascript}
 var foo = {bar: 'foobar'};
 console.log(foo);
+~~~
 
 Or you can use it's sprintf()-like capabilities to format your debug output:
 
+~~~ {.javascript}
 var foo = {bar: 'foobar'};
 console.log('Hello %s, this is my object: %o', 'World', foo);^
+~~~
 
 ### Using the node debugger
 
 If console.log() isn't your thing, or you think your problem can be better analyzed using breakpoints, the node's built-in debugger is a great choice. You invoke can invoke the debugger by simply calling:
 
-node.js debugger my_file.js
+    node.js debugger my_file.js
 
 ^Figure out how this really works
 
@@ -225,14 +254,14 @@ If you have just written your first node.js application, and you want to get it 
 
 2. Assuming your project contains a 'server.js' file, navigate to the directory containing it, then type:
 
-screen
-node server.js
+    screen
+    node server.js
 
 This invokes your 'server.js' program inside a so called screen session. Screen is tool to provide you with a shell that remain its state, even when you close the terminal app you used to login to your server.
 
 So you can now safely close your terminal app, and your your 'server.js' will continue running. If you want to monitor it, you can log into your server again, and type:
 
-screen -r
+    screen -r
 
 This will reconnect you to the backgrounded shell running your program.
 
