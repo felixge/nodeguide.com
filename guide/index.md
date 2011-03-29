@@ -9,7 +9,7 @@ Over the past few month I have given a lot of [talks][talks] and done a lot of
 [consulting][consulting] on using node.js.
 
 Since I found myself repeating a lot of things over and over, I decided to use some
-of my recent vacation to start this oppionated and unofficial guide to help
+of my recent vacation to start this opinionated and unofficial guide to help
 people getting started in node.js.
 
 ## Content
