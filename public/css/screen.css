@@ -37,6 +37,10 @@ h1 a, h2 a, h3 a, h4 a{
   text-decoration: none;
 }
 
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover{
+  text-decoration: underline;
+}
+
 code.sourceCode span.kw { color: #C6C5FE; font-weight: bold; } 
 code.sourceCode span.dt { color: #fff; }
 code.sourceCode span.dv { color: #FF73FD; }
