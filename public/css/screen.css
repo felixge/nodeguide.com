@@ -1,0 +1,52 @@
+body{
+  font-family: Georgia,serif;
+}
+
+p{
+  font-size: 18px;
+}
+
+a{
+  color: #0050C0;
+}
+
+a:visited{
+  color: #B950B7;
+}
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.shell, pre.sourceCode{
+  -moz-border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Courier New";
+  background-color: #000;
+  color: #fff;
+}
+
+.copyright{
+  font-size: 10px;
+}
+
+h1 a, h2 a, h3 a, h4 a{
+  color: #000;
+  text-decoration: none;
+}
+
+code.sourceCode span.kw { color: #C6C5FE; font-weight: bold; } 
+code.sourceCode span.dt { color: #fff; }
+code.sourceCode span.dv { color: #FF73FD; }
+code.sourceCode span.bn { color: #40a070; }
+code.sourceCode span.fl { color: #40a070; }
+code.sourceCode span.ch { color: #A8FF60; }
+code.sourceCode span.st { color: #A8FF60; }
+code.sourceCode span.co { color: #60a0b0; font-style: italic; }
+code.sourceCode span.ot { color: #007020; }
+code.sourceCode span.al { color: red; font-weight: bold; }
+code.sourceCode span.fu { color: #fff; }
+code.sourceCode span.re { }
+code.sourceCode span.er { color: red; font-weight: bold; }
