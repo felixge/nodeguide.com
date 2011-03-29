@@ -33,7 +33,7 @@ Since not everybody is tagging their content, it's sometimes also good to simply
 
 http://search.twitter.com/?q=node.js
 
-## Prominent Community Members
+## Community Members
 
 If you are curious about the people driving the node.js development & ecosystem, here is a list of a few people whose names you should know.
 

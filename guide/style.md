@@ -30,30 +30,38 @@ Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
 
 Use single quotes, unless you are writing JSON.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var foo = 'bar';
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var foo = "bar";
+~~~
 
 ## Braces
 
 Your opening braces go on the same line as the statement.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 if (true) {
   console.log('winning);
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 if (true)
 {
   console.log('loosing');
 }
+~~~
 
 Also notice the usage of spaces before and after the condition statement.
 
@@ -61,8 +69,9 @@ Also notice the usage of spaces before and after the condition statement.
 
 Declare one variable per var statement, it makes it easier to re-order the lines. Ignore Crockford^ on this, and put those declarations wherever they make sense.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var keys = ['foo', 'bar'];
 var values = [23, 42];
 
@@ -71,116 +80,143 @@ while (items.length) {
   var key = keys.pop();
   object[key] = values.pop();
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var keys = ['foo', 'bar'],
-      values = [23, 42],
-      object = {},
-      key;
+    values = [23, 42],
+    object = {},
+    key;
 
 while (items.length) {
   key = keys.pop();
   object[key] = values.pop();
 }
+~~~
 
 ## Variable and property names
 
 Variables and properties should use camelBack^ capitalization. They should also be descriptive. Single character variables and uncommon abbriviations should generally be avoided.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var adminUser = db.query('SELECT * FROM users ...');
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var admin_user = d.query('SELECT * FROM users ...');
+~~~
 
 ## Class names
 
 Class names should be captialized using CamelCase^.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 function BankAccount() {
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 function bank_Account() {
 }
+~~~
 
 ## Constants
 
 Constants should be declared as regular variables or class properties, using all uppercase letters. ^explain why const is bad
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var SECOND = 1 * 1000;
 
 function File() {
 }
 File.FULL_PERMISSIONS = 0777;
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 const SECOND = 1 * 1000;
 
 function File() {
 }
 File.fullPermissions = 0777; 
+~~~
 
 ## Object / Array creation
 
 Use trailing commas and put *short* declarations on a single line, only quote keys when your interpreter complains:
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var a = ['hello', 'world'];
 var b = {
   good: 'code',
   'is generally': 'pretty',
 };
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var a = [
   'hello', 'world'
 ];
 var b = {"'good": 'code'
-             , 'is generally': 'pretty'};
+        , 'is generally': 'pretty'
+        };
+~~~
 
 ## Equality operator
 
 Programming is not about remembering stupid rules. Use the tripple equality operator as it will work just as expected. ^check example
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var a = 0;
 if (a === '') {
   console.log('winning');
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var a = 0;
 if (a == '') {
   console.log('loosing');
 }
+~~~
 
 ## Extending protoypes
 
 Do not extend the prototypes of any objects after it has been initially defined. There is a special place in hell waiting for you if you don't obey this rule.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var a = [];
 if (!a.length) {
   console.log('winning');
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 Array.prototype.empty = function() {
   return !this.length;
 }
@@ -189,23 +225,28 @@ var a = [];
 if (a.empty()) {
   console.log('loosing');
 }
+~~~
 
 ## Conditions
 
 Any non-trivial conditions should be assigned to a descriptive variable:
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var isAuthorized = (user.isAdmin() || user.isModerator());
 if (isAuthorized) {
   console.log('winning');
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 if (user.isAdmin() || user.isModerator()) {
   console.log('loosing');
 }
+~~~
 
 ## Function length
 
@@ -215,8 +256,9 @@ Keep your functions short. A good function fits on a slide that the people in th
 
 To avoid deep nesting of if-statements, always return a functions value as early asossible.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 function isPercentage(val) {
   if (val < 0) {
     return false;
@@ -226,11 +268,13 @@ function isPercentage(val) {
     return false;
   }
 
-   return true;
+  return true;
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 function isPercentage(val) {
   if (val < 0) {
     if (val > 100) {
@@ -242,36 +286,44 @@ function isPercentage(val) {
     return false;
   }
 }
+~~~
 
 Or for this particular example it may also be fine to shorten things even further:
 
+~~~ {.javascript}
 function isPercentage(val) {
   var isInRange = (val >= 0 && val <= 100);
   return isInRange;
 }
+~~~
 
 ## Named closures
 
 Feel free to give your closures a name. It shows at you care about them, and will produce better stack traces:
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 req.on('end', function onEnd() {
   console.log('winning');
 });
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 req.on('end', function() {
   console.log('loosing');
 });
+~~~
 
 ## Nested Closures
 
 Use closures, but don't nest them. Otherwise your code will become a mess.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 setTimeout(function() {
   client.connect(afterConnect);
 }, 1000);
@@ -279,21 +331,25 @@ setTimeout(function() {
 function afterConnect() {
   console.log('winning');
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 setTimeout(function() {
   client.connect(function() {
     console.log('loosing');
   });
 }, 1000);
+~~~
 
 ## Callbacks
 
 Since node is all about non-blocking I/O, functions generally return their results using callbacks. The convention used by the node core to reserve the first parameter of any callback for an optional error object.
 
-Right:
+*Right:*
 
+~~~ {.javascript}
 var fs = require('fs');
 
 function loadConfig(cb) {
@@ -311,9 +367,11 @@ function loadConfig(cb) {
     }
   });
 }
+~~~
 
-Wrong:
+*Wrong:*
 
+~~~ {.javascript}
 var fs = require('fs');
 
 function loadConfig(cb) {
@@ -331,6 +389,7 @@ function loadConfig(cb) {
     }
   });
 }
+~~~
 
 ## Object.freeze, Object.create, with and eval ^maybe others
 
@@ -346,7 +405,9 @@ Feel free to use getters for side-effect free functions^, like providing a lengt
 
 Node.js ships with a simple EventEmitter class that can be included from the 'events' module:
 
+~~~ {.javascript}
 var EventEmitter = require('events').EventEmitter;
+~~~
 
 When creating complex classes, it is common to inherit from this EventEmitter class to emit events. This is basically a simple implementation of the Observable^ pattern.
 
