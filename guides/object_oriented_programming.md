@@ -1,0 +1,63 @@
+# Felix's Node.js Object Oriented Programming Guide
+
+Object oriented programming is a fairly well-understood approach to write maintainable Software. Even so JavaScript does not explicetly favor OOP, it makes it easy enough to use it.
+
+To help with some common tasks, I recommend that you use the 'oop' module. (Disclaimer: I'm the author of the oop module.)
+
+## Basic Example
+
+Here is a basic example of a node.js class. The later parts of this document will explore various concepts behind it.
+
+var oop = require('oop');
+var EventEmitter = require('events').EventEmitter;
+
+function KitchenTimer(properties) {
+  this._interval = null;
+  this._timeout = null;
+  this._minutes = null;
+  this._start = null;
+
+  oop.inherits(this, EventEmitter);
+  oop.mixin(this, properties);
+}
+
+KitchenTimer.SECOND = 1000;
+KitchenTimer.MINUTE = KitchenTimer.SECOND * 60;
+
+KitchenTimer.create = function(minutes) {
+  var timer = new KitchenTimer();
+  timer.set(minutes);
+  return timer;
+}
+
+KitchenTimer.prototype.set = function(minutes) {
+  var ms = minutes * KitchenTimer.MINUTE;
+  this._timeout = setTimeout(this._ring.bind(this), ms);
+  this._interval = setInterval(this._tick.bind(this), KitchenTimer.SECOND);
+
+  this._minutes = minutes;
+  this._start = new Date();
+};
+
+KitchenTimer.prototype._tick = function() {
+  this.emit('tick');
+};
+
+KitchenTimer.prototype._ring = function() {
+  this.emit('ring');
+  this.reset();
+}
+
+KitchenTimer.prototype.reset = function() {
+  clearTimeout(this._timeout);
+  clearInterval(this._interval);
+
+  oop.reset(this);
+}
+
+KitchenTimer.prototype.remaining = function() {
+  var ms = (new Date() - this._start);
+  var minutes = ms / KitchenTimer.MINUTE;
+  return minutes;
+};
+

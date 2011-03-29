@@ -1,0 +1,71 @@
+# Felix's Node.js Package Guide
+
+There is no official way that dictates how you may structure and publish your node.js packages. This guide aims to provide you with an oppinionated set of conventions based on popular choices within the node.js community.
+
+## Related Guides
+
+* Felix's Node.js Beginner's Guide - If you are new to node.js
+* Felix's Node.js Style Guide^ - If you want your code to look nice
+* Felix's Node.js Object Oriented Programming Guide^ - If you care about well-structured software
+* Felix's Node.js Test Driven Development Guide^ - If you want to use test driven development
+
+## Directory Structure
+
+You can basically structure your packages any way you want, but here is a good set of conventions that will allow you to do so consistently.
+
+Let's assume you want to create a simple package called '' that provides you with basic mathematical functions concerning 2D structures:
+
+package.json
+node_modules/
+  geometry/
+    index.js
+    circle.js
+    point.js
+    square.js
+    triangle.js
+test/
+  micro/
+    test-circle.js
+    test-square.js
+    test-point.js
+    test-triangle.js
+  integration/
+  system/
+
+To explain: Your main package goes into the 'node_modules' folder, the same place where npm will bundle any dependencies your package may have. Since node's module system recognizes this folder, you can do `require('geometry/circle')` from any JavaScript file within your module, without expicitely having to provide the path for it.
+
+For more information on the contens of the 'test' folder, please visit my Test Driven Development Guide^.
+
+## 
+
+## Using git for version control
+
+Most people in the node.js community use Git^ / GitHub^ to manage and publish their source code. If you are using Git, you probably want to exclude your dependencies from showing up in your git repository. In order to do so, create a '.gitignore' file with the following content in your packages root directory:
+
+/node_modules/*
+!/node_modules/geometry/*
+
+This will ignore everything in your 'node_modules' folder, except your package (which in this case is named 'geometry').
+
+## Editor settings
+
+You probably want to configure your editor to ignore anything except your main module in the 'node_modules' folder when searching through files. Here are the instructions on how to do so for a few choosen editors:
+
+### Vim
+
+^todo
+
+### TextMate
+
+^todo
+
+## Publishing to npm
+
+Npm^ is the de-facto package manager used by the node community, and the Beginner's Guide^ includes instructions on how to install it.
+
+In order to publish a package, you need to create a user account like so:
+
+npm adduser <your-username>
+^todo: Check if this is the correct syntax
+
+

@@ -1,0 +1,88 @@
+# Felix's Node.js Convincing the boss guide
+
+Now that you're all hyped up about using node.js, it's time to convince your boss. Well, maybe. I had the pleasure of consulting^ for different busineses on whether node.js is the right technology, and sometimes the answer is simply no.
+
+So this guide is my oppinonated collection of advice for those of you that want to explore if node.js makes sense for their business, and if so, how to convince the management.
+
+##  Use cases
+
+### No: CPU heavy apps
+
+Even so I love node.js, there are several use cases where it simply doesn't make sense. The most obvious such case is apps that are very heavy on CPU usage, and very light on actual I/O. So if you're planning to write video encoding software, artificial intellegence or similar CPU hungry software, please do not use node.js. While you can twist and bend things quite a bit, you'll probably get better results with C or C++.
+
+That being said, node.js allows you to easily write C++ addons, so you could certainly use it as a scripting engine on top of your super-secret algorithms.
+
+### No: Simple CRUD / HTML apps
+
+While node.js will eventually be a fun tool for writing all kinds of web applications, you shouldn't expect it do provide you with more benefits than PHP, Ruby or Python at this point. Yes, your app might end up slightly more scalable, but no - you're app will not magically get more traffic just because you write it in node.js.
+
+The truth is that while we are starting to see good frameworks for node.js, there is nothing as powerful as Rails, CakePHP or Django on the scene yet. If most of your app is simply rendering HTML based on some database, using node.js will not provide many tangingable business benefits yet.
+
+## No: NoSQL + Node.js + Buzzword Bullshit
+
+If the architecture for your next apps reads like the cookbook of NoSQL ingredients, please pause for a second and read this.
+
+Yes, Redis, CouchDB, MongoDB, Riak, Casandra, etc. all look really tempting, but so did that red apple Eve couldn't resist. If you're already taking a technological risk with using node.js, you shouldn't multiply it with more technology you probably don't fully understand yet.
+
+Sure, there are legitmate use cases for choosing a document oriented database. But if you are trying to build a business on top of your software, sticking to conservative database technology (like postgres or mysql) might just outweigh the benefits of satisfying your inner nerd and impressing your friends.
+
+### Yes: JSON API's
+
+Building light-weight REST / JSON api's is something where node.js really shines. It's non-blocking I/O model combined with JavaScript make it a great choice for wrapping other data sources such as datbases or web services and exposing them via a JSON interface.
+
+### Yes: Single page apps
+
+If you are planning to write an AJAX heavy single page app (think gmail), node.js is a great fit as well. The ability to process many requests / seconds with low response times, as well as sharing things like validation code between the client and server make it a great choice for modern web applications that do lots of processing on the client.
+
+### Yes: Shelling out to unix tools
+
+With node.js still being young, it's tempting to re-invent all kinds of software for it. However, an even better approach is tapping into the vast universe of existing command line tools. Node's ability to spawn thousands of child processes and treating their outputs as a stream makes it an ideal choice for those seeking to leverage existing software.
+
+### Yes: Streaming data
+
+Traditional web stacks often treat http requests and responses as atomic events. However, the truth is that they are streams, and many cool node.js applications can be build to take advantage of this fact. One great example is parsing file uploads in real time^, as well as building proxies between different data layers.
+
+### Yes: Soft Realtime Applications
+
+Another great aspects of node.js is the ease at which you can develop soft real time systems. By that I mean stuff like twitter, chat software, sport bets or interfaces to instant messaging networks.
+
+But please be careful here, since JavaScript is a dynamic / garbage collected language, your response times may sometimes vary depending on how often and long the garbage collection kicks in (at which point your program is stopped). So don't try to build hard realtime systems in node, that require consistent response times. Erlang is probably a better choice for these kinds of applications.
+
+## Convincing the boss
+
+Once you have determined that your use case is a good fit for node.js, it's time to convince your boss or management of giving it a go.
+
+### Building a prototype
+
+The best way to your foot into the door, is to suggest taking a week to build a simple prototype of a certain part of the application you have in mind. It's usually easy to get management to agree to that, since they don't have to make a long term commitment yet.
+
+After you've got the approval, it's usually easy to get a basic system up and running, which will provide you with much more hard data and evidence of the benefits of node.js.
+
+### Finding developers
+
+Think of JavaScript whatever you want, but at this point it's becoming the lingua franca^ of computer programming. Pretty much every personal computer has one or more JavaScript interpreters (browsers) installed, which means it's almost impossible for most web developers to learn it at some point in their career.
+
+This means that you get a huge and diverse pool of people you can hire, and you probably already have plenty of talent in your own company. So if you're working for a growing company, this is a strong argument favoring node.js.
+
+### Vibrant community
+
+At this point the node.js community is growing at an insane pace, attracting some of the smartest developers in the industry. This also means that the node ecosystem is growing every day, and it's also easy to get free and commercial support from various sources.
+
+### Performance
+
+This argument has to be carefully played, but if performance is a critical aspect of your application, node.js has lots to offer. With five companies (Mozilla, Google, Apple, Microsoft, Opera) competing over the best JavaScript implementation, node's underlaying interpreter (Google's v8) has become insanely fast, and getting better every day.
+
+Combining this with node's radical model of non-blocking I/O, you have to try very hard to create a sluggish application. Most node apps are easily capable of handling thousands of concurrent connections, on what could be considered moderate hardware by any standards.
+
+### Coporate Backing
+
+One of the risks with using a young open source project is the lack of longterm commitement by it's authors. This isn't the case with node.js. Node is currently sponsored by Joyent^, who has hired Ryan Dahl and several other core contributors, so there is a real economic force backing the future development of the project.
+
+Amongst other things, this has already given companies like Yahoo! and HP (formerly Palm) enough confidence to build their next generation products on node.js, so your boss can certainly relax by reading their reassuring testimonials.
+
+## Convincing a client
+
+If you're a freelancer or small company doing contract work, convincing a client to use node.js might be a different story. After all they are usually very dependent on your judgement, as well as continous support for the software you create for them.
+
+My advice here is to be a little more conservative, and double check if node is a good fit. If it is, make sure that you have the resources and time to support the application in the future. The node.js team is releasing new versions at a rapid pace, and so you should expect a little work every 3-6 months to update to the latest version.
+
