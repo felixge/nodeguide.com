@@ -23,7 +23,12 @@ people getting started in node.js.
 [Node.js Community Guide](community.html)
   ~ Get to know some of the node.js community and find out where they hang out.
 
-More guides are in the works!
+More guides are in the works. Feel free to follow the [GitHub repository][repo].
+
+## Report Issues
+
+If you come across some incorrect information, please open an issue in the
+[issue tracker][issuetracker].
 
 ## License
 
@@ -35,4 +40,6 @@ re-publishing this content in one way or another, please send me an [email][emai
 [transloadit]: http://transloadit.com/
 [consulting]: http://debuggable.com/
 [talks]: http://www.slideshare.net/the_undefined/edit_my_uploads
+[repo]: https://github.com/felixge/nodeguide.com
+[issuetracker]: https://github.com/felixge/nodeguide.com/issues
 [email]: mailto:felix@debuggable.com
