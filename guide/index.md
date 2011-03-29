@@ -39,7 +39,7 @@ re-publishing this content in one way or another, please send me an [email][emai
 [nodejs]: http://nodejs.org/
 [transloadit]: http://transloadit.com/
 [consulting]: http://debuggable.com/
-[talks]: http://www.slideshare.net/the_undefined/edit_my_uploads
+[talks]: http://www.slideshare.net/the_undefined/presentations
 [repo]: https://github.com/felixge/nodeguide.com
 [issuetracker]: https://github.com/felixge/nodeguide.com/issues
 [email]: mailto:felix@debuggable.com
