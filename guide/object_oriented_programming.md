@@ -1,12 +1,16 @@
 % Felix's Node.js Object Oriented Programming Guide
 
-Object oriented programming is a fairly well-understood approach to write maintainable Software. Even so JavaScript does not explicetly favor OOP, it makes it easy enough to use it.
+Object oriented programming is a fairly well-understood approach to write
+maintainable Software. Even so JavaScript does not explicetly favor OOP, it
+makes it easy enough to use it.
 
-To help with some common tasks, I recommend that you use the 'oop' module. (Disclaimer: I'm the author of the oop module.)
+To help with some common tasks, I recommend that you use the 'oop' module.
+(Disclaimer: I'm the author of the oop module.)
 
 ## Basic Example
 
-Here is a basic example of a node.js class. The later parts of this document will explore various concepts behind it.
+Here is a basic example of a node.js class. The later parts of this document
+will explore various concepts behind it.
 
 var oop = require('oop');
 var EventEmitter = require('events').EventEmitter;

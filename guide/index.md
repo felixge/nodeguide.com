@@ -2,15 +2,15 @@
 
 ## About this guide
 
-Hi, I am [Felix Geisendörfer][felixge], an early [node.js][nodejs] core contributor and
-co-founder of [transloadit.com][transloadit].
+Hi, I am [Felix Geisendörfer][felixge], an early [node.js][nodejs] core
+contributor and co-founder of [transloadit.com][transloadit].
 
 Over the past few month I have given a lot of [talks][talks] and done a lot of
 [consulting][consulting] on using node.js.
 
-Since I found myself repeating a lot of things over and over, I decided to use some
-of my recent vacation to start this opinionated and unofficial guide to help
-people getting started in node.js.
+Since I found myself repeating a lot of things over and over, I decided to use
+some of my recent vacation to start this opinionated and unofficial guide to
+help people getting started in node.js.
 
 ## Content
 
@@ -33,7 +33,8 @@ If you come across some incorrect information, please open an issue in the
 ## License
 
 I have not decided on a license for this yet. So if you're interested in
-re-publishing this content in one way or another, please send me an [email][email].
+re-publishing this content in one way or another, please send me an
+[email][email].
 
 [felixge]: http://twitter.com/felixge
 [nodejs]: http://nodejs.org/
