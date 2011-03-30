@@ -322,7 +322,7 @@ console.log('Hello %s, this is my object: %j', 'World', foo);
 
 If console.log() isn't your thing, or you think your problem can be better
 analyzed using breakpoints, the node's built-in debugger is a great choice. You
-invoke can invoke the debugger by simply calling:
+can invoke the debugger by simply calling:
 
 ~~~ {.shell}
 $ node.js debugger my_file.js
