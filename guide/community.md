@@ -1,4 +1,4 @@
-# Felix's Node.js Community Guide
+% Felix's Node.js Community Guide
 
 If you have just read the Beginner's Guide, and you are interested in becoming more involed with the node.js community, this guide is for you.
 

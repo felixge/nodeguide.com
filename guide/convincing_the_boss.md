@@ -1,4 +1,4 @@
-# Felix's Node.js Convincing the boss guide
+% Felix's Node.js Convincing the boss guide
 
 Now that you're all hyped up about using node.js, it's time to convince your boss. Well, maybe. I had the pleasure of consulting^ for different busineses on whether node.js is the right technology, and sometimes the answer is simply no.
 

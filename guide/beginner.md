@@ -1,4 +1,4 @@
-# Felix's Node.js Beginners Guide
+% Felix's Node.js Beginners Guide
 
 There is lots of information about node.js, but given the rapid pace at which it is developed, it can be difficult for beginners to find current and good information on how to get started. This guide aims at providing exactly that, while staying updated with the latest stable version of node.js.
 

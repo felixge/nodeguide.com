@@ -1,4 +1,4 @@
-# Felix's Node.js Object Oriented Programming Guide
+% Felix's Node.js Object Oriented Programming Guide
 
 Object oriented programming is a fairly well-understood approach to write maintainable Software. Even so JavaScript does not explicetly favor OOP, it makes it easy enough to use it.
 
