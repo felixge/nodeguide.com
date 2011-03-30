@@ -382,7 +382,9 @@ running as fast as possible, this is how to do it:
 
 1. Copy your program to the server you want to run it on. If you're using git,
 this probably just means to clone the repository from another server or service
-like GitHub^.
+like [GitHub][].
+
+[GitHub]: http://github.com/
 
 2. Assuming your project contains a 'server.js' file, navigate to the directory
 containing it, then type:

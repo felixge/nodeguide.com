@@ -82,9 +82,11 @@ those seeking to leverage existing software.
 
 Traditional web stacks often treat http requests and responses as atomic events.
 However, the truth is that they are streams, and many cool node.js applications
-can be build to take advantage of this fact. One great example is parsing file
-uploads in real time^, as well as building proxies between different data
+can be build to take advantage of this fact. One great example is parsing [file
+uploads in real time][realtimeencoding], as well as building proxies between different data
 layers.
+
+[realtimeencoding]: http://transloadit.com/blog/2010/12/realtime-encoding-over-150x-faster
 
 ### Soft Realtime Applications
 
@@ -153,7 +155,7 @@ moderate hardware by any standards.
 
 One of the risks with using a young open source project is the lack of longterm
 commitment by it's authors. This isn't the case with node.js. Node is currently
-sponsored by Joyent^, who has hired Ryan Dahl and several other core
+sponsored by [Joyent][], who has hired Ryan Dahl and several other core
 contributors, so there is a real economic force backing the future development
 of the project.
 
@@ -161,6 +163,8 @@ Amongst other things, this has already given companies like Yahoo! and HP
 (formerly Palm) enough confidence to build their next generation products on
 node.js, so your boss can certainly relax by reading their reassuring
 testimonials.
+
+[joyent]: http://joyent.com/
 
 ## Convincing a client
 
