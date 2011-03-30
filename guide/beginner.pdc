@@ -325,7 +325,7 @@ analyzed using breakpoints, the node's built-in debugger is a great choice. You
 can invoke the debugger by simply calling:
 
 ~~~ {.shell}
-$ node.js debugger my_file.js
+$ node.js debug my_file.js
 ~~~
 
 *Work in progress, please come back later ...*
