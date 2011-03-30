@@ -348,7 +348,7 @@ function isPercentage(val) {
 
 ## Named closures
 
-Feel free to give your closures a name. It shows at you care about them, and
+Feel free to give your closures a name. It shows that you care about them, and
 will produce better stack traces:
 
 *Right:*
