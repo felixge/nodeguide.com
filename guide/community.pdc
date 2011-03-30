@@ -75,6 +75,7 @@ sponsor for node.js.
 
 * IRC Nick: ryah
 * Twitter: [@ryah](http://twitter.com/ryah)
+* GitHub: [ry](https://github.com/ry)
 * Blog: [blog.nodejs.org](http://blog.nodejs.org/)
 * Where: San Fransico, USA
 
@@ -87,6 +88,7 @@ community from [semicolon slavery](semicolon).
 
 * IRC Nick: isaacs
 * Twitter: [@isaacs](http://twitter.com/isaacs)
+* GitHub: [isaacs](https://github.com/isaacs)
 * Blog: [blog.izs.me](http://blog.izs.me/)
 * Where: San Fransico, USA
 
@@ -100,6 +102,7 @@ of the biggest overall contributors to the project.
 
 * IRC Nick: piscisaureus
 * Twitter: [@piscisaureus](http://twitter.com/piscisaureus)
+* GitHub: [piscisaureus](https://github.com/piscisaureus)
 * Where: Netherlands
 
 ### TJ Holowaychuk
@@ -108,6 +111,7 @@ TJ is the author of [express][express], [jade][jade] and many other popular
 node.js libraries.
 
 * Twitter: [@tjholowaychuk](http://twitter.com/tjholowaychuk)
+* GitHub: [visionmedia](https://github.com/visionmedia)
 * Blog: [tjholowaychuk.com](http://tjholowaychuk.com/)
 * Where: Victoria, BC, Canada
 
@@ -122,11 +126,11 @@ is also known for collaborative blog [howtonode.org][howtonode].
 
 * IRC Nick: creationix
 * Twitter: [@creationix](http://twitter.com/creationix)
+* GitHub: [creationix](https://github.com/creationix)
 * Blog: [howtonode.org][howtonode]
 * Where: San Fransico, USA
 
 [howtonode]: http://howtonode.org/
-
 [connect]: https://github.com/senchalabs/connect
 
 ### Felix Geisendörfer
@@ -139,6 +143,7 @@ providing file uploading & video encoding as a service called
 
 * IRC Nick: felixge
 * Twitter: [@felixge](http://twitter.com/felixge)
+* GitHub: [felixge](https://github.com/felixge)
 * Blog: [debuggable.com/blog](http://debuggable.com/blog)
 * Where: Berlin, Germany
 
@@ -153,6 +158,7 @@ development of node.js as well as the community.
 
 * IRC Nick: mikeal
 * Twitter: [@mikeal](http://twitter.com/mikeal)
+* GitHub: [mikeal](https://github.com/mikeal)
 * Blog: [mikealrogers.com](http://www.mikealrogers.com/)
 * Where: San Fransico, USA
 
@@ -165,6 +171,7 @@ Alexis is a JavaScript mastermind who is responsible for projects such as
 
 * IRC Nick: cloudhead
 * Twitter: [@cloudhead](http://twitter.com/cloudhead)
+* GitHub: [cloudhead](https://github.com/cloudhead)
 * Blog: [cloudhead.io](http://cloudhead.io/)
 * Where: Montreal, QC, Canada
 
@@ -179,6 +186,7 @@ also running a node.js startup called [DocumentCloud][].
 
 * IRC Nick: jashkenas
 * Twitter: [@jashkenas](http://twitter.com/jashkenas)
+* GitHub: [jashkenas](https://github.com/jashkenas), [documentcloud](https://github.com/documentcloud)
 * Where: New York City, USA
 
 [CoffeeScript]: https://github.com/jashkenas/coffee-script
@@ -196,6 +204,7 @@ understanding of JavaScript by far.
 
 * IRC Nick: jedschmidt
 * Twitter: [@jedschmidt](http://twitter.com/jedschmidt)
+* GitHub: [jed](https://github.com/jed)
 * Blog: [jedschmidt.com](http://jedschmidt.com/)
 * Where: Tokyo, Japan
 
@@ -211,6 +220,7 @@ sword duell.
 
 * IRC Nick: jimbastard
 * Twitter: [@maraksquires](http://twitter.com/maraksquires)
+* GitHub: [marak](https://github.com/marak)
 * Blog: [blog.nodejitsu.com](http://blog.nodejitsu.com/)
 * Where: New York City, USA
 
@@ -218,11 +228,12 @@ sword duell.
 
 Some of you may know Peter from his popular blog [catomat.net][catomat].
 Together with James Halliday, he has recently started a node.js startup called
-[browserling][browserling], which has also lead to tons of open source modules
+[browserling][browserling], which has also led to tons of open source modules
 from the two of them.
 
 * IRC Nick: pkrumins
 * Twitter: [@pkrumins](http://twitter.com/pkrumins)
+* GitHub: [pkrumins](https://github.com/pkrumins)
 * Blog: [catomat.net][catomat]
 * Where:  Riga, Latvia
 
@@ -232,11 +243,12 @@ from the two of them.
 ### James Halliday
 
 James is the author of many popular node.js libraries, such as [dnode][dnode],
-[optimist][optimist] and [browserify][browserify]. He is also know for drawing
+[optimist][optimist] and [browserify][browserify]. He is also known for drawing
 cute robots for [browserling][browserling] which he runs with Peteris Krumins.
 
 * IRC Nick: substack
 * Twitter: [@substack](http://twitter.com/substack)
+* GitHub: [substack](https://github.com/substack)
 * Blog: [substack.net](http://substack.net/)
 * Where: Oakland, California, USA
 
