@@ -11,8 +11,11 @@ currently stable branch of node.js.
 ## Learning JavaScript
 
 This guide assumes that you are already familar with JavaScript. If you are not,
-you should go ahead and read: Eloquent JavaScript^, a free online book by
-Marein^ (also available in print^ via Amazon).
+you should go ahead and read: [Eloquent JavaScript][eloquentjs], a free online
+book by [Marijn Haverbeke][marijn].
+
+[eloquentjs]: http://eloquentjavascript.net/
+[marijn]: http://twitter.com/marijnjh
 
 ## Hello World Tutorial
 
@@ -31,12 +34,14 @@ downloaded source code. There are also various packages available for different
 package managers, but since their update frequency varies, I recommend
 installing from source.
 
-You can get the latest source code from nodejs.org^. After you have downloaded
-the archive, you simply install node.js by typing the following commands into
-your terminal:
+You can get the latest source code from [nodejs.org][nodejs]. Use the commands
+below to download and install v0.4.4:
+
+[nodejs]: http://nodejs.org/
 
 ~~~ {.shell}
-$ tar -xzf node.tar.gz ^
+$ curl -o node.tar.gz http://nodejs.org/dist/node-v0.4.4.tar.gz
+$ tar -xzf node.tar.gz
 $ cd node
 $ ./configure
 $ sudo make install
@@ -44,8 +49,11 @@ $ sudo make install
 
 Node.js itself has no external dependencies except common build tools as well as
 pythons for the build system itself. On OSX you must install XCode for this to
-work, and on Ubuntu you probably have to run `apt-get -y install
-buildessentials`^.
+work, and on Ubuntu you probably have to run:
+
+~~~ {.shell}
+$ apt-get -y install build-essential
+~~~
 
 ### The interactive node.js shell
 
@@ -59,11 +67,13 @@ Hello World
 ~~~
 
 The interactive shell (also called REPL) is a great place to test simple
-oneliners, and can also be directly embedded into your node.js applications. In
-order to get out of it, simply press Ctrl + C.
+oneliners, and can also be directly [embedded][repldocs] into your node.js
+applications. In order to get out of it, simply press Ctrl + C.
 
 The REPL also comes with many other great features, most importantly tab
 auto-completion.
+
+[repldocs]: http://nodejs.org/docs/v0.4.4/api/repl.html
 
 ### Your first program
 
@@ -78,7 +88,7 @@ console.log('Hello World');
 After you have saved the file, you can execute it from your terminal like so:
 
 ~~~ {.shell}
-node hello.js
+$ node hello.js
 Hello World
 ~~~
 
@@ -100,7 +110,9 @@ server.listen(8080);
 
 Now lets run this program from the terminal by typing:
 
-    node hello_http.js
+~~~ {.shell}
+$ node hello_http.js
+~~~
 
 The first thing you'll notice is that this program, unlike our first one,
 doesn't exit right away. That's because a node program will always run until
@@ -108,14 +120,16 @@ it's certain that there are no events to be possible. In this case the open http
 server is the source of events that keeps things going.
 
 Testing the server is as simple as opening a new browser tab, and navigating to
-the following url: http://localhost:8080/. As expected, you should see a
-response that reads: 'Hello Http'.
+the following url: [http://localhost:8080/](http://localhost:8080/). As
+expected, you should see a response that reads: 'Hello Http'.
 
 Alternatively, you could also open up a new terminal and use curl to test your
 server:
 
-    curl localhost:8080
-    Hello Http
+~~~ {.shell}
+$ curl localhost:8080
+Hello Http
+~~~
 
 Now let's have a closer look at the steps involved in our little program. In the
 first line, we include the http core module and assign it to a variable called
@@ -169,8 +183,10 @@ and it is returned whenever the `require` function is used to include the
 module. If we now go ahead and run our 'main.js' program, we will see the
 expected output:
 
-    node main.js
-    Hello World
+~~~ {.shell}
+$ node main.js
+Hello World
+~~~
 
 At this point it should also be mentioned that many node users are overwriting
 the exports object directly like so:
@@ -182,12 +198,14 @@ module.exports = function() {
 ~~~
 
 As you might have expected, this will directly cause the `require` function to
-return the assigned function. This use useful if you're doing object oriented
-programming^, where each file exports the constructor of one class.
+return the assigned function. This use useful if you're doing [object oriented
+programming][oopguide], where each file exports the constructor of one class.
 
 The next thing you need to know about the module system is how it deals with
 `require` calls that don't include a relative hint about the location of the
 included file. Take for example:
+
+[oopguide]: object_oriented_programming.html
 
 ~~~ {.javascript}
 var http = require('http');
@@ -208,7 +226,7 @@ folder is found, node.js will look into this folder for a file called
 node.js will give up and throw an exception.
 
 At this point node.js also considers an additional, mutable list of alternative
-include directories which are accessible through the `require.paths`^ array.
+include directories which are accessible through the `require.paths` array.
 However, there is intense debate about removing this feature, so you are
 probably better off ignoring it.
 
@@ -219,13 +237,15 @@ be considered, this goes for non-relative includes as well.
 
 ## Using EventEmitters
 
-Node.js implements the oberservable pattern^ using a class called EventEmitter.
+Node.js implements the [observer pattern][observerpattern] using a class called EventEmitter.
 Whenever there is an object that represents the source of several kinds of
 events, node.js usually makes the underlaying class inherit from EventEmitter.
 
 Using EventEmitter's is pretty forward. You can listen to a specific event by
 calling the 'on()' function on your object, providing the name of the event, as
 well as a callback closure as the parameters. For example:
+
+[observerpattern]: http://en.wikipedia.org/wiki/Observer_pattern
 
 ~~~ {.javascript}
 var data = '';
@@ -244,14 +264,14 @@ belongs to, allowing you to chain several of such event listerns.
 If you're only interested in the first occurence of an event, you can use the
 `once()` function instead.
 
-Finally, you can remove event listeners by using the `removeListener`^ function.
+Finally, you can remove event listeners by using the `removeListener` function.
 Please note that the argument to this function is a reference to the callback
 you are trying to remove, no the name of the event:
 
 ~~~ {.javascript}
 var onData = function(chunk) {
   console.log(chunk);
-  req.removeListener(onData);^
+  req.removeListener(onData);
 }
 
 req.on('data', onData);
@@ -262,18 +282,22 @@ The example above is essentially identical to the `once()` function.
 ## Next Steps
 
 Now that you know your node.js basics, you're probably best off by writing a few
-little programs yourself. The best place to start out is node's api
-documentation^, using it as a source of inspiration for something you want to
+little programs yourself. The best place to start out is [node's api
+documentation][nodeapidocs], using it as a source of inspiration for something you want to
 play with.
+
+[nodeapidocs]: http://nodejs.org/docs/v0.4.4/api/
 
 ## Debugging node.js apps
 
 There are many ways to debug your node.js based applications. Personally I
 prefer to do as little debugging as possible, so I strictly follow the advice of
-the test driven development guide.
+the [test driven development guide][tddguide].
 
 However, if you find yourself in a situation where you need to locate a tricky
 bug in an existing applications, here are a few approaches that can help.
+
+[tddguide]: test_driven_development.html
 
 ### Using console.log()
 
@@ -289,7 +313,7 @@ Or you can use it's sprintf()-like capabilities to format your debug output:
 
 ~~~ {.javascript}
 var foo = {bar: 'foobar'};
-console.log('Hello %s, this is my object: %o', 'World', foo);^
+console.log('Hello %s, this is my object: %j', 'World', foo);
 ~~~
 
 ### Using the node debugger
@@ -298,13 +322,15 @@ If console.log() isn't your thing, or you think your problem can be better
 analyzed using breakpoints, the node's built-in debugger is a great choice. You
 invoke can invoke the debugger by simply calling:
 
-    node.js debugger my_file.js
+~~~ {.shell}
+$ node.js debugger my_file.js
+~~~
 
-^Figure out how this really works
+*Work in progress, please come back later ...*
 
 ### Using the WebKit Inspector
 
-^Figure out how this really works
+*Work in progress, please come back later ...*
 
 ## Frameworks
 
@@ -315,10 +341,10 @@ you a quick overview over the popular choices, and my opppinonated take on them.
 
 ### Express
 
-At this point express is probably the go-to framework for most developers. At
-2.0^ it's relatively mature, and includes the connect^ (think rack) middleware
-layer. Included in the package are routing, configuration, a template engine,
-POST parsing and many other features.
+At this point [express][express] is probably the go-to framework for most
+node.js developers. It's relatively mature, and includes the [connect][connect]
+(think rack) middleware layer.  Included in the package are routing,
+configuration, a template engine, POST parsing and many other features.
 
 While express is a solid framework, it's currently adressing a much smaller
 scope than fullstack frameworks like Rails, CakePHP or Django. It's more
@@ -327,15 +353,16 @@ differentiate itself from it's Ruby roots into something that feels natural in
 JavaScript. Anyhow, short of writing your own framework, it's certainly a great
 choice at this point.
 
-Site: http://expressjs.com/^
+[express]: http://expressjs.com/
+[connect]: https://github.com/senchalabs/connect
 
 ### fab.js
 
 You think you know JavaScript? Think again. Originally inspired by jQuery's
-chaining, fab.js has taken a very unconvential approach of twisting JavaScript
-beyond most peoples brain capacity. Each function returns another function,
-elimating the need for method names altogether, while giving the resulting code
-a lisp-esque look & feel.
+chaining, [fab.js][fabjs] has taken a very unconvential approach of twisting
+JavaScript beyond most peoples brain capacity. Each function returns another
+function, elimating the need for method names altogether, while giving the
+resulting code a lisp-esque look & feel.
 
 At this point I don't consider fab.js production-ready, but if you're still
 exploring the world of node.js, you should absolutely try it out at least once.
@@ -343,12 +370,7 @@ If nothing else, fab.js shows the world that JavaScript doesn't have to copy
 Ruby, Python or PHP when it comes to web frameworks, and can go it's own unique
 ways.
 
-Site: http://fabjs.com/^
-
-### Geddy
-
-^ FIgure out if I should include geddy here, or if there are any other node.js
-frameworks currently actively developed & popular
+[fabjs]: http://fabjs.org/
 
 ## Hosting & Deployment
 
@@ -364,8 +386,10 @@ like GitHub^.
 2. Assuming your project contains a 'server.js' file, navigate to the directory
 containing it, then type:
 
-    screen
-    node server.js
+    ~~~ {.shell}
+    $ screen
+    $ node server.js
+    ~~~
 
 This invokes your 'server.js' program inside a so called screen session. Screen
 is tool to provide you with a shell that remain its state, even when you close
@@ -375,7 +399,9 @@ So you can now safely close your terminal app, and your your 'server.js' will
 continue running. If you want to monitor it, you can log into your server again,
 and type:
 
-    screen -r
+~~~ {.shell}
+$ screen -r
+~~~
 
 This will reconnect you to the backgrounded shell running your program.
 
@@ -383,7 +409,7 @@ However, this approach is only recommended for experimental deployments. If your
 node applications crashes at some point, screen will not try to restart it, so
 don't use this method for production applications.
 
-### Amazon EC2
-
 ### Joyent no.de
+
+*Work in progress, please come back later ...*
 
