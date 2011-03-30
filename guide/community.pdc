@@ -146,9 +146,9 @@ providing file uploading & video encoding as a service called
 [mysql]: https://github.com/felixge/node-mysql
 [transloadit]: http://transloadit.com/
 
-### Mikael Rogers
+### Mikeal Rogers
 
-Mikael is the author of [request][request], and is also very active in the
+Mikeal is the author of [request][request], and is also very active in the
 development of node.js as well as the community.
 
 * IRC Nick: mikeal
