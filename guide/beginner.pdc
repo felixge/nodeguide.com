@@ -351,7 +351,7 @@ configuration, a template engine, POST parsing and many other features.
 While express is a solid framework, it's currently addressing a much smaller
 scope than fullstack frameworks like Rails, CakePHP or Django. It's more
 comparable to Sinatra, and unfortunately doesn't really make a big effort to
-differentiate itself from it's Ruby roots into something that feels natural in
+differentiate itself from its Ruby roots into something that feels natural in
 JavaScript. Anyhow, short of writing your own framework, it's certainly a great
 choice at this point.
 
@@ -369,7 +369,7 @@ resulting code a lisp-esque look & feel.
 At this point I don't consider fab.js production-ready, but if you're still
 exploring the world of node.js, you should absolutely try it out at least once.
 If nothing else, fab.js shows the world that JavaScript doesn't have to copy
-Ruby, Python or PHP when it comes to web frameworks, and can go it's own unique
+Ruby, Python or PHP when it comes to web frameworks, and can go its own unique
 ways.
 
 [fabjs]: http://fabjs.org/
