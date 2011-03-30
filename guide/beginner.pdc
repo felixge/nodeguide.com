@@ -396,8 +396,8 @@ containing it, then type:
     ~~~
 
 This invokes your 'server.js' program inside a so called screen session. Screen
-is tool to provide you with a shell that remain its state, even when you close
-the terminal app you used to login to your server.
+is a tool that provides you with a shell that remains its state, even when you
+close the terminal app you used to login to your server.
 
 So you can now safely close your terminal app, and your your 'server.js' will
 continue running. If you want to monitor it, you can log into your server again,
