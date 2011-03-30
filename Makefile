@@ -24,5 +24,8 @@ public/%.html : guide/%.md
 		$< \
 		-o $@
 
+deploy: html
+	scp -r public/* debug1:/var/www/nodeguide.com
+
 clean:
 	rm -vf public/*.html
