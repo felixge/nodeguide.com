@@ -1,5 +1,7 @@
 % Felix's Node.js Package Guide
 
+# IMPORTANT: This guide is not ready to yet, please go away.
+
 There is no official way that dictates how you may structure and publish your
 node.js packages. This guide aims to provide you with an oppinionated set of
 conventions based on popular choices within the node.js community.
