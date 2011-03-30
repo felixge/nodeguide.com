@@ -311,7 +311,7 @@ var foo = {bar: 'foobar'};
 console.log(foo);
 ~~~
 
-Or you can use it's sprintf()-like capabilities to format your debug output:
+Or you can use its sprintf()-like capabilities to format your debug output:
 
 ~~~ {.javascript}
 var foo = {bar: 'foobar'};
