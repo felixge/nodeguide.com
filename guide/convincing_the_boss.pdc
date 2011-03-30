@@ -151,10 +151,10 @@ very hard to create a sluggish application. Most node apps are easily capable of
 handling thousands of concurrent connections, on what could be considered
 moderate hardware by any standards.
 
-### Coporate Backing
+### Corporate Backing
 
 One of the risks with using a young open source project is the lack of longterm
-commitment by it's authors. This isn't the case with node.js. Node is currently
+commitment by its authors. This isn't the case with node.js. Node is currently
 sponsored by [Joyent][], who has hired Ryan Dahl and several other core
 contributors, so there is a real economic force backing the future development
 of the project.
