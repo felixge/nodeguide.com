@@ -39,7 +39,7 @@ The two official lists are:
 ## Twitter
 
 Since twitter cuts off tag names when it sees a dot character, many people use
-to tag '#nodejs' to highlight node.js related content on twitter. You can find
+the tag '#nodejs' to highlight node.js related content on twitter. You can find
 the current stream of tweets via their search function:
 
 [http://search.twitter.com/search?q=%23nodejs](http://search.twitter.com/search?q=%23nodejs)
@@ -65,10 +65,13 @@ IRC, he's a very busy guy. So don't be upset if he doesn't answer your direct
 questions right away, there are usually other people around who can help as
 well.
 
-Ryan is currently working for Joyent^, a company that provides great
-heroku-style node.js hosting^, and is the official coporate sponsor node.js.
+Ryan is currently working for [Joyent][joyent], a company that provides great
+heroku-style [node.js hosting][nodehosting], and is the official coporate
+sponsor for node.js.
 
 [bdfl]: http://en.wikipedia.org/wiki/BDFL
+[joyent]: http://joyent.com/
+[nodehosting]: http://no.de/
 
 * IRC Nick: ryah
 * Twitter: [@ryah](http://twitter.com/ryah)
