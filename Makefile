@@ -1,5 +1,5 @@
-GUIDES = $(notdir $(wildcard guide/*.md))
-HTML_GUIDES = $(addprefix public/,$(GUIDES:.md=.html))
+GUIDES = $(notdir $(wildcard guide/*.pdc))
+HTML_GUIDES = $(addprefix public/,$(GUIDES:.pdc=.html))
 PANDOC_DEFAULT_OPTIONS = \
 		-5 \
 		-c css/screen.css \
@@ -11,13 +11,13 @@ PANDOC_GUIDE_OPTIONS = \
 
 html: $(HTML_GUIDES)
 
-public/index.html : guide/index.md
+public/index.html : guide/index.pdc
 	pandoc \
 		$(PANDOC_DEFAULT_OPTIONS) \
 		$< \
 		-o $@
 
-public/%.html : guide/%.md
+public/%.html : guide/%.pdc
 	pandoc \
 		$(PANDOC_DEFAULT_OPTIONS) \
 		$(PANDOC_GUIDE_OPTIONS) \
