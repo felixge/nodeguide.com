@@ -103,7 +103,7 @@ the file 'hello_http.js' and put the following code into it:
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
-  res.sendHead(200);
+  res.writeHead(200);
   res.end('Hello Http');
 });
 server.listen(8080);
