@@ -24,6 +24,17 @@ help people getting started in node.js.
   ~ Get to know some of the node.js community and find out where they hang out.
 
 More guides are in the works. Feel free to follow the [GitHub repository][repo].
+Or have a look at this list of upcoming guides:
+
+*Node.js Package Guide*
+  ~ Learn how to create your own node.js packages and publish them on npm.
+*Node.js Object Oriented Programming Guide*
+  ~ My approach to object oriented programming with node.js.
+*Node.js Test Driven Development Guide*
+  ~ A beginners guide to test driven development with node.js.
+*Node.js Convincing The Boss Guide*
+  ~ Find out where node.js makes sense, and how to get management to see the
+    benefits.
 
 ## Report Issues
 
