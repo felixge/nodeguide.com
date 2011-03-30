@@ -1,23 +1,23 @@
 % Felix's Node.js Style Guide
 
 There is no official document that governs the style of node.js applications.
-This guide is my oppionated attempt to bring you a good set of instructions that
+This guide is my opinionated attempt to bring you a good set of instructions that
 will allow you to create beautiful and consistent software.
 
-This guide assumes that you are only targetting node.js. If your code also needs
+This guide assumes that you are only targeting node.js. If your code also needs
 to run in the browser or other environments, please ignore some of it.
 
 ## Tabs vs Spaces
 
 Let's start with the religious problems first. Our [benevolant dictator][ryah]
-has choosen 2 space indention for the node core, so you would do well to follow
+has chosen 2 space indention for the node core, so you would do well to follow
 his orders.
 
 [ryah]: community.html#ryan-dahl
 
 ## Semicolons
 
-There are [rebilious forces][isaac] that try to steal your semicolons from
+There are [rebellious forces][isaac] that try to steal your semicolons from
 you. But make no mistake, our traditional culture is still [well and
 alive][hnsemicolons]. So follow the community, and use those semicolons!
 
@@ -31,7 +31,7 @@ executing the currently open file with node.js will come in very handy. While
 [vim][vim] may not help you to impress the ladies, it will please our
 [BDFL][bdfl] and your grandpa will also approve.
 
-I'm typing this document in Notes on my iPad, but that's beacause I'm on a beach
+I'm typing this document in Notes on my iPad, but that's because I'm on a beach
 in Thailand, your work environment may impact your choice of editors as well.
 
 [vim]: http://www.vim.org/
@@ -128,7 +128,7 @@ while (items.length) {
 
 Variables and properties should use [lower camel case][camelcase]
 capitalization. They should also be descriptive. Single character variables and
-uncommon abbriviations should generally be avoided.
+uncommon abbreviations should generally be avoided.
 
 *Right:*
 
@@ -146,7 +146,7 @@ var admin_user = d.query('SELECT * FROM users ...');
 
 ## Class names
 
-Class names should be captialized using [upper camel case][camelcase].
+Class names should be capitalized using [upper camel case][camelcase].
 
 *Right:*
 
@@ -222,7 +222,7 @@ var b = {"good": 'code'
 ## Equality operator
 
 Programming is not about remembering [stupid rules][comparisonoperators]. Use
-the tripple equality operator as it will work just as expected.
+the triple equality operator as it will work just as expected.
 
 *Right:*
 
@@ -245,7 +245,7 @@ if (a == '') {
 
 [comparisonoperators]: https://developer.mozilla.org/en/JavaScript/Reference/Operators/Comparison_Operators
 
-## Extending protoypes
+## Extending prototypes
 
 Do not extend the prototypes of any objects, especially native ones. There is a
 special place in hell waiting for you if you don't obey this rule.
@@ -401,7 +401,7 @@ first parameter of any callback for an optional error object.
 
 ## Object.freeze, Object.preventExtensions, Object.seal, with, eval
 
-Crazy shit that you will propably never need. Stay away from it.
+Crazy shit that you will probably never need. Stay away from it.
 
 ## Getters and setters
 
@@ -428,12 +428,12 @@ Observable^ pattern.
 
 However, I strongly recommend that you never listen to the events of your own
 class from within it. It's not natural for an object to observe itself. It often
-leads to undesirable exposure of internal implementationd details, and makes
+leads to undesirable exposure of internal implementation details, and makes
 your code more difficult to follow along.
 
-## Inheritence / Object oriented programming
+## Inheritance / Object oriented programming
 
-Inheritence and object oriented programming are a whole subject by themselves.
+Inheritance and object oriented programming are a whole subject by themselves.
 If you're interested in following this popular programming model, please read my
 Object oriented programming guide^.
 
