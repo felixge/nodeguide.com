@@ -396,8 +396,10 @@ setTimeout(function() {
 ## Callbacks
 
 Since node is all about non-blocking I/O, functions generally return their
-results using callbacks. The convention used by the node core to reserve the
+results using callbacks. The convention used by the node core is to reserve the
 first parameter of any callback for an optional error object.
+
+You should use the same approach for your own callbacks.
 
 ## Object.freeze, Object.preventExtensions, Object.seal, with, eval
 
