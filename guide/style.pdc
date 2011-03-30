@@ -8,8 +8,8 @@ This guide assumes that you are only targeting node.js. If your code also needs
 to run in the browser or other environments, please ignore some of it.
 
 Please also note that node.js as well as various packages for it each have
-their slightly own style. So if you're interested in contributing to them,
-please follow their style.
+their slightly own styles. So if you're interested in contributing to those,
+play by their rules.
 
 ## Tabs vs Spaces
 
