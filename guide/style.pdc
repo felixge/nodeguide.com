@@ -424,7 +424,9 @@ var EventEmitter = require('events').EventEmitter;
 
 When creating complex classes, it is common to inherit from this EventEmitter
 class to emit events. This is basically a simple implementation of the
-Observable^ pattern.
+[Observer pattern][].
+
+[Observer pattern]: http://en.wikipedia.org/wiki/Observer_pattern
 
 However, I strongly recommend that you never listen to the events of your own
 class from within it. It's not natural for an object to observe itself. It often
