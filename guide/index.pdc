@@ -23,8 +23,8 @@ help people getting started in node.js.
 [Node.js Community Guide](community.html)
   ~ Get to know some of the node.js community and find out where they hang out.
 
-More guides are in the works. Feel free to follow the [GitHub repository][repo].
-Or have a look at this list of upcoming guides:
+More guides are in the works. Feel free to follow the [GitHub repository][repo],
+or have a look at this list of upcoming guides:
 
 *Node.js Package Guide*
   ~ Learn how to create your own node.js packages and publish them on npm.
