@@ -2,7 +2,7 @@ body{
   font-family: Georgia,serif;
 }
 
-p{
+p, li, dd, dt{
   font-size: 18px;
 }
 
