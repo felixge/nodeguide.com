@@ -28,9 +28,9 @@ certainly use it as a scripting engine on top of your super-secret algorithms.
 ### Simple CRUD / HTML apps
 
 While node.js will eventually be a fun tool for writing all kinds of web
-applications, you shouldn't expect it do provide you with more benefits than
+applications, you shouldn't expect it to provide you with more benefits than
 PHP, Ruby or Python at this point. Yes, your app might end up slightly more
-scalable, but no - you're app will not magically get more traffic just because
+scalable, but no - your app will not magically get more traffic just because
 you write it in node.js.
 
 The truth is that while we are starting to see good frameworks for node.js,
@@ -55,10 +55,10 @@ the benefits of satisfying your inner nerd and impressing your friends.
 
 ## Good Use Cases
 
-### JSON API's
+### JSON APIs
 
 Building light-weight REST / JSON api's is something where node.js really
-shines. It's non-blocking I/O model combined with JavaScript make it a great
+shines. Its non-blocking I/O model combined with JavaScript make it a great
 choice for wrapping other data sources such as databases or web services and
 exposing them via a JSON interface.
 
@@ -82,7 +82,7 @@ those seeking to leverage existing software.
 
 Traditional web stacks often treat http requests and responses as atomic events.
 However, the truth is that they are streams, and many cool node.js applications
-can be build to take advantage of this fact. One great example is parsing [file
+can be built to take advantage of this fact. One great example is parsing [file
 uploads in real time][realtimeencoding], as well as building proxies between different data
 layers.
 
@@ -90,7 +90,7 @@ layers.
 
 ### Soft Realtime Applications
 
-Another great aspects of node.js is the ease at which you can develop soft real
+Another great aspect of node.js is the ease at which you can develop soft real
 time systems. By that I mean stuff like twitter, chat software, sport bets or
 interfaces to instant messaging networks.
 
