@@ -437,5 +437,7 @@ your code more difficult to follow along.
 
 Inheritance and object oriented programming are a whole subject by themselves.
 If you're interested in following this popular programming model, please read my
-Object oriented programming guide^.
+[Object oriented programming guide][].
+
+[Object oriented programming guide]: object_oriented_programming.html
 
