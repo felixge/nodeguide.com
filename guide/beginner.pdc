@@ -66,7 +66,7 @@ $ node
 Hello World
 ~~~
 
-The interactive shell (also called REPL) is a great place to test simple
+The interactive shell (also called [REPL][]) is a great place to test simple
 one liners, and can also be directly [embedded][repldocs] into your node.js
 applications. In order to get out of it, simply press Ctrl + C.
 
@@ -74,6 +74,7 @@ The REPL also comes with many other great features, most importantly tab
 auto-completion.
 
 [repldocs]: http://nodejs.org/docs/v0.4.4/api/repl.html
+[REPL]: http://en.wikipedia.org/wiki/REPL
 
 ### Your first program
 
@@ -198,7 +199,7 @@ module.exports = function() {
 ~~~
 
 As you might have expected, this will directly cause the `require` function to
-return the assigned function. This use useful if you're doing [object oriented
+return the assigned function. This is useful if you're doing [object oriented
 programming][oopguide], where each file exports the constructor of one class.
 
 The next thing you need to know about the module system is how it deals with
@@ -230,7 +231,7 @@ include directories which are accessible through the `require.paths` array.
 However, there is intense debate about removing this feature, so you are
 probably better off ignoring it.
 
-Last but not least, node.js also let's you create an 'index.js' file, which
+Last but not least, node.js also lets you create an 'index.js' file, which
 indicates the main include file for a directory. So if you call
 `require('./foo')`, both a 'foo.js' file as well as an 'foo/index.js' file will
 be considered, this goes for non-relative includes as well.
@@ -242,7 +243,7 @@ EventEmitter.  Whenever there is an object that represents the source of several
 kinds of events, node.js usually makes the underlaying class inherit from
 EventEmitter.
 
-Using EventEmitter's is pretty forward. You can listen to a specific event by
+Using EventEmitter's is pretty straight-forward. You can listen to a specific event by
 calling the 'on()' function on your object, providing the name of the event, as
 well as a callback closure as the parameters. For example:
 
@@ -267,7 +268,7 @@ If you're only interested in the first occurrence of an event, you can use the
 
 Finally, you can remove event listeners by using the `removeListener` function.
 Please note that the argument to this function is a reference to the callback
-you are trying to remove, no the name of the event:
+you are trying to remove, not the name of the event:
 
 ~~~ {.javascript}
 var onData = function(chunk) {
