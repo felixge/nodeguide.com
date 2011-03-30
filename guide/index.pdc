@@ -18,7 +18,7 @@ help people getting started in node.js.
   ~ If you are new to node.js, this guide will take you from hello world to
     deploying your first app.
 [Node.js Style Guide](style.html)
-  ~ The generell JavaScript style I recommend to use with node.js. A lot of
+  ~ The general JavaScript style I recommend to use with node.js. A lot of
     this is personal preferences, but hopefully rather consistent.
 [Node.js Community Guide](community.html)
   ~ Get to know some of the node.js community and find out where they hang out.
