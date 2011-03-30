@@ -67,7 +67,7 @@ Hello World
 ~~~
 
 The interactive shell (also called REPL) is a great place to test simple
-oneliners, and can also be directly [embedded][repldocs] into your node.js
+one liners, and can also be directly [embedded][repldocs] into your node.js
 applications. In order to get out of it, simply press Ctrl + C.
 
 The REPL also comes with many other great features, most importantly tab
@@ -177,7 +177,7 @@ exports.world = function() {
 }
 ~~~
 
-What you notice here, is that we are assigng a property called 'world' to an
+What you notice here, is that we are assigning a property called 'world' to an
 object called 'exports'. Such an 'exports' object is available in every module,
 and it is returned whenever the `require` function is used to include the
 module. If we now go ahead and run our 'main.js' program, we will see the
@@ -237,9 +237,10 @@ be considered, this goes for non-relative includes as well.
 
 ## Using EventEmitters
 
-Node.js implements the [observer pattern][observerpattern] using a class called EventEmitter.
-Whenever there is an object that represents the source of several kinds of
-events, node.js usually makes the underlaying class inherit from EventEmitter.
+Node.js implements the [observer pattern][observerpattern] using a class called
+EventEmitter.  Whenever there is an object that represents the source of several
+kinds of events, node.js usually makes the underlaying class inherit from
+EventEmitter.
 
 Using EventEmitter's is pretty forward. You can listen to a specific event by
 calling the 'on()' function on your object, providing the name of the event, as
@@ -259,9 +260,9 @@ req
 ~~~
 
 As you can see, the `on()` function also returns a reference to the object it
-belongs to, allowing you to chain several of such event listerns.
+belongs to, allowing you to chain several of such event listeners.
 
-If you're only interested in the first occurence of an event, you can use the
+If you're only interested in the first occurrence of an event, you can use the
 `once()` function instead.
 
 Finally, you can remove event listeners by using the `removeListener` function.
@@ -283,8 +284,8 @@ The example above is essentially identical to the `once()` function.
 
 Now that you know your node.js basics, you're probably best off by writing a few
 little programs yourself. The best place to start out is [node's api
-documentation][nodeapidocs], using it as a source of inspiration for something you want to
-play with.
+documentation][nodeapidocs], using it as a source of inspiration for something
+you want to play with.
 
 [nodeapidocs]: http://nodejs.org/docs/v0.4.4/api/
 
@@ -337,7 +338,7 @@ $ node.js debugger my_file.js
 If you're new to node.js, you might not want to re-invent the wheel when it
 comes to parsing POST requests, routing urls or rendering views. In this case,
 you probably want to use one of the popular web frameworks. This section gives
-you a quick overview over the popular choices, and my opppinonated take on them.
+you a quick overview over the popular choices, and my opinionated take on them.
 
 ### Express
 
@@ -346,7 +347,7 @@ node.js developers. It's relatively mature, and includes the [connect][connect]
 (think rack) middleware layer.  Included in the package are routing,
 configuration, a template engine, POST parsing and many other features.
 
-While express is a solid framework, it's currently adressing a much smaller
+While express is a solid framework, it's currently addressing a much smaller
 scope than fullstack frameworks like Rails, CakePHP or Django. It's more
 comparable to Sinatra, and unfortunately doesn't really make a big effort to
 differentiate itself from it's Ruby roots into something that feels natural in
@@ -359,9 +360,9 @@ choice at this point.
 ### fab.js
 
 You think you know JavaScript? Think again. Originally inspired by jQuery's
-chaining, [fab.js][fabjs] has taken a very unconvential approach of twisting
+chaining, [fab.js][fabjs] has taken a very unconventional approach of twisting
 JavaScript beyond most peoples brain capacity. Each function returns another
-function, elimating the need for method names altogether, while giving the
+function, eliminating the need for method names altogether, while giving the
 resulting code a lisp-esque look & feel.
 
 At this point I don't consider fab.js production-ready, but if you're still
