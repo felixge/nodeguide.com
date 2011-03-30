@@ -1,30 +1,54 @@
-# Felix's Node.js Style Guide
+% Felix's Node.js Style Guide
 
-There is no official document that governs the style of node.js applications. This guide is my oppionated attempt to bring you a good set of instructions that will allow you to create beautiful and consistent software.
+There is no official document that governs the style of node.js applications.
+This guide is my oppionated attempt to bring you a good set of instructions that
+will allow you to create beautiful and consistent software.
 
-This guide assumes that you are only targetting node.js. If your code also needs to run in the browser or other environments, please ignore some of it.
+This guide assumes that you are only targetting node.js. If your code also needs
+to run in the browser or other environments, please ignore some of it.
 
 ## Tabs vs Spaces
 
-Let's start with the religious problems first. Our benevolant dictator^ has choosen 2 space indention for the node core, so you would do well to follow his orders.
+Let's start with the religious problems first. Our [benevolant dictator][ryah]
+has choosen 2 space indention for the node core, so you would do well to follow
+his orders.
+
+[ryah]: community.html#ryan-dahl
 
 ## Semicolons
 
-There are rebilious forces^ that try to steal your semicolons from you. But make no mistake, our traditional culture is still well and alive. So follow our great dictators C-loving style and use those semicolons!
+There are [rebilious forces][isaac] that try to steal your semicolons from
+you. But make no mistake, our traditional culture is still [well and
+alive][hnsemicolons]. So follow the community, and use those semicolons!
+
+[isaac]: community.html#isaac-schlueter
+[hnsemicolons]: http://news.ycombinator.com/item?id=1547647
 
 ## Editors
 
-You can use any editor. However, having support for JS syntax highlighting and executing the currently open file with node.js will come in very handy. While vim^ may not help you to impress the ladies, it will please the BDFL^ and your grandpa will also approve.
+You can use any editor. However, having support for JS syntax highlighting and
+executing the currently open file with node.js will come in very handy. While
+[vim][vim] may not help you to impress the ladies, it will please our
+[BDFL][bdfl] and your grandpa will also approve.
 
-I'm typing this document in Notes on my iPad, but that's beacause I'm on a beach in Thailand, your work environment may impact your choice of editors as well.
+I'm typing this document in Notes on my iPad, but that's beacause I'm on a beach
+in Thailand, your work environment may impact your choice of editors as well.
+
+[vim]: http://www.vim.org/
+[bdfl]: http://en.wikipedia.org/wiki/BDFL
 
 ## Trailing whitespace
 
-Just like you brush your teeth after every meal, you clean up any trailing whitespace in your JavaScript files before committing. Otherwise the rotten smell of careless neglect will drive away any contributors or co-workers after a while.
+Just like you brush your teeth after every meal, you clean up any trailing
+whitespace in your JavaScript files before committing. Otherwise the rotten
+smell of careless neglect will drive away any contributors or co-workers after a
+while.
 
 ## Line length
 
-Limit your lines to 80 characters. Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
+Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
+last few years, but your brain hasn't. Use the additional room for split screen,
+your editor supports that, right?
 
 ## Quotes
 
@@ -67,7 +91,9 @@ Also notice the usage of spaces before and after the condition statement.
 
 ## Variable declarations
 
-Declare one variable per var statement, it makes it easier to re-order the lines. Ignore Crockford^ on this, and put those declarations wherever they make sense.
+Declare one variable per var statement, it makes it easier to re-order the
+lines. Ignore [Crockford][crockfordconvention] on this, and put those
+declarations wherever they make sense.
 
 *Right:*
 
@@ -96,9 +122,13 @@ while (items.length) {
 }
 ~~~
 
+[crockfordconvention]: http://javascript.crockford.com/code.html
+
 ## Variable and property names
 
-Variables and properties should use camelBack^ capitalization. They should also be descriptive. Single character variables and uncommon abbriviations should generally be avoided.
+Variables and properties should use [lower camel case][camelcase]
+capitalization. They should also be descriptive. Single character variables and
+uncommon abbriviations should generally be avoided.
 
 *Right:*
 
@@ -112,9 +142,11 @@ var adminUser = db.query('SELECT * FROM users ...');
 var admin_user = d.query('SELECT * FROM users ...');
 ~~~
 
+[camelcase]: http://en.wikipedia.org/wiki/camelCase#Variations_and_synonyms
+
 ## Class names
 
-Class names should be captialized using CamelCase^.
+Class names should be captialized using [upper camel case][camelcase].
 
 *Right:*
 
@@ -132,7 +164,12 @@ function bank_Account() {
 
 ## Constants
 
-Constants should be declared as regular variables or class properties, using all uppercase letters. ^explain why const is bad
+Constants should be declared as regular variables or static class properties,
+using all uppercase letters.
+
+Node.js / V8 actually supports mozilla's [const][const] extension, but
+unfortunately that cannot be applied to class members, nor is it part of any
+ECMA standard.
 
 *Right:*
 
@@ -154,9 +191,12 @@ function File() {
 File.fullPermissions = 0777; 
 ~~~
 
+[const]: https://developer.mozilla.org/en/JavaScript/Reference/Statements/const
+
 ## Object / Array creation
 
-Use trailing commas and put *short* declarations on a single line, only quote keys when your interpreter complains:
+Use trailing commas and put *short* declarations on a single line. Only quote
+keys when your interpreter complains:
 
 *Right:*
 
@@ -174,14 +214,15 @@ var b = {
 var a = [
   'hello', 'world'
 ];
-var b = {"'good": 'code'
-        , 'is generally': 'pretty'
+var b = {"good": 'code'
+        , is generally: 'pretty'
         };
 ~~~
 
 ## Equality operator
 
-Programming is not about remembering stupid rules. Use the tripple equality operator as it will work just as expected. ^check example
+Programming is not about remembering [stupid rules][comparisonoperators]. Use
+the tripple equality operator as it will work just as expected.
 
 *Right:*
 
@@ -190,6 +231,7 @@ var a = 0;
 if (a === '') {
   console.log('winning');
 }
+
 ~~~
 
 *Wrong:*
@@ -201,9 +243,12 @@ if (a == '') {
 }
 ~~~
 
+[comparisonoperators]: https://developer.mozilla.org/en/JavaScript/Reference/Operators/Comparison_Operators
+
 ## Extending protoypes
 
-Do not extend the prototypes of any objects after it has been initially defined. There is a special place in hell waiting for you if you don't obey this rule.
+Do not extend the prototypes of any objects, especially native ones. There is a
+special place in hell waiting for you if you don't obey this rule.
 
 *Right:*
 
@@ -250,11 +295,14 @@ if (user.isAdmin() || user.isModerator()) {
 
 ## Function length
 
-Keep your functions short. A good function fits on a slide that the people in the last row of a big room can comfortably read. So don't count on them having perfect vision and limit yourself to ~10 lines of code per function.
+Keep your functions short. A good function fits on a slide that the people in
+the last row of a big room can comfortably read. So don't count on them having
+perfect vision and limit yourself to ~10 lines of code per function.
 
 ## Return statements
 
-To avoid deep nesting of if-statements, always return a functions value as early asossible.
+To avoid deep nesting of if-statements, always return a functions value as early
+as possible.
 
 *Right:*
 
@@ -288,7 +336,8 @@ function isPercentage(val) {
 }
 ~~~
 
-Or for this particular example it may also be fine to shorten things even further:
+Or for this particular example it may also be fine to shorten things even
+further:
 
 ~~~ {.javascript}
 function isPercentage(val) {
@@ -299,7 +348,8 @@ function isPercentage(val) {
 
 ## Named closures
 
-Feel free to give your closures a name. It shows at you care about them, and will produce better stack traces:
+Feel free to give your closures a name. It shows at you care about them, and
+will produce better stack traces:
 
 *Right:*
 
@@ -345,75 +395,45 @@ setTimeout(function() {
 
 ## Callbacks
 
-Since node is all about non-blocking I/O, functions generally return their results using callbacks. The convention used by the node core to reserve the first parameter of any callback for an optional error object.
+Since node is all about non-blocking I/O, functions generally return their
+results using callbacks. The convention used by the node core to reserve the
+first parameter of any callback for an optional error object.
 
-*Right:*
-
-~~~ {.javascript}
-var fs = require('fs');
-
-function loadConfig(cb) {
-  fs.readFile('config.json', 'utf-8', function(err, data) {
-    if (err) {
-      cb(err);
-      return;
-    }
-
-    try {
-      var config = JSON.parse(data);
-      cb(null, config);
-    } catch (jsonParseError) {
-      cb(jsonParseError);
-    }
-  });
-}
-~~~
-
-*Wrong:*
-
-~~~ {.javascript}
-var fs = require('fs');
-
-function loadConfig(cb) {
-  fs.readFile('config.json', 'utf-8', function(err, data) {
-    if (err) {
-      cb(err);
-      return;
-    }
-
-    try {
-      var config = JSON.parse(data);
-      cb(config);
-    } catch (jsonParseError) {
-      cb(jsonParseError);
-    }
-  });
-}
-~~~
-
-## Object.freeze, Object.create, with and eval ^maybe others
+## Object.freeze, Object.preventExtensions, Object.seal, with, eval
 
 Crazy shit that you will propably never need. Stay away from it.
 
 ## Getters and setters
 
-Do not use setters, they cause more problems for people who try to use your software than they can solve.
+Do not use setters, they cause more problems for people who try to use your
+software than they can solve.
 
-Feel free to use getters for side-effect free functions^, like providing a length property for a collection class.
+Feel free to use getters that are free of [side effects][sideffect], like
+providing a length property for a collection class.
+
+[sideffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
 
 ## EventEmitters
 
-Node.js ships with a simple EventEmitter class that can be included from the 'events' module:
+Node.js ships with a simple EventEmitter class that can be included from the
+'events' module:
 
 ~~~ {.javascript}
 var EventEmitter = require('events').EventEmitter;
 ~~~
 
-When creating complex classes, it is common to inherit from this EventEmitter class to emit events. This is basically a simple implementation of the Observable^ pattern.
+When creating complex classes, it is common to inherit from this EventEmitter
+class to emit events. This is basically a simple implementation of the
+Observable^ pattern.
 
-However, I strongly recommend that you never listen to the events of your own class from within it. It's not natural for an object to observe itself. It often leads to undesirable exposure of internal implementationd details, and makes your code more difficult to follow along.
+However, I strongly recommend that you never listen to the events of your own
+class from within it. It's not natural for an object to observe itself. It often
+leads to undesirable exposure of internal implementationd details, and makes
+your code more difficult to follow along.
 
 ## Inheritence / Object oriented programming
 
-Inheritence and object oriented programming are a whole subject by themselves. If you're interested in following this popular programming model, please read my Object oriented programming guide^.
+Inheritence and object oriented programming are a whole subject by themselves.
+If you're interested in following this popular programming model, please read my
+Object oriented programming guide^.
 
