@@ -87,7 +87,7 @@ if (true) {
 ~~~ {.javascript}
 if (true)
 {
-  console.log('loosing');
+  console.log('losing');
 }
 ~~~
 
@@ -243,7 +243,7 @@ if (a === '') {
 ~~~ {.javascript}
 var a = 0;
 if (a == '') {
-  console.log('loosing');
+  console.log('losing');
 }
 ~~~
 
@@ -272,7 +272,7 @@ Array.prototype.empty = function() {
 
 var a = [];
 if (a.empty()) {
-  console.log('loosing');
+  console.log('losing');
 }
 ~~~
 
@@ -293,7 +293,7 @@ if (isAuthorized) {
 
 ~~~ {.javascript}
 if (user.isAdmin() || user.isModerator()) {
-  console.log('loosing');
+  console.log('losing');
 }
 ~~~
 
@@ -367,7 +367,7 @@ req.on('end', function onEnd() {
 
 ~~~ {.javascript}
 req.on('end', function() {
-  console.log('loosing');
+  console.log('losing');
 });
 ~~~
 
@@ -392,7 +392,7 @@ function afterConnect() {
 ~~~ {.javascript}
 setTimeout(function() {
   client.connect(function() {
-    console.log('loosing');
+    console.log('losing');
   });
 }, 1000);
 ~~~
