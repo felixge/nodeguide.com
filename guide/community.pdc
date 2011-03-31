@@ -40,14 +40,12 @@ The two official lists are:
 
 Since twitter cuts off tag names when it sees a dot character, many people use
 the tag '#nodejs' to highlight node.js related content on twitter. You can find
-the current stream of tweets via their search function:
+the current stream of tweets via twitter's search function:
 
-[http://search.twitter.com/search?q=%23nodejs](http://search.twitter.com/search?q=%23nodejs)
+[http://search.twitter.com/search?q=%23nodejs%20OR%20node.js](http://search.twitter.com/search?q=%23nodejs%20OR%20node.js)
 
-Since not everybody is tagging their content, it's sometimes also good to simply
-search for 'node.js' as a term:
-
-[http://search.twitter.com/search?q=node.js](http://search.twitter.com/search?q=node.js)
+Since not everybody is tagging their content, the above query also includes
+results for the term 'node.js' itself.
 
 ## Community Members
 
