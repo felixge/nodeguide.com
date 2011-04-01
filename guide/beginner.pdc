@@ -40,9 +40,9 @@ below to download and install v0.4.4:
 [nodejs]: http://nodejs.org/
 
 ~~~ {.shell}
-$ curl -o node.tar.gz http://nodejs.org/dist/node-v0.4.4.tar.gz
-$ tar -xzf node.tar.gz
-$ cd node
+$ wget http://nodejs.org/dist/node-v0.4.4.tar.gz
+$ tar -xzf node-v0.4.4.tar.gz
+$ cd node-v0.4.4.tar.gz
 $ ./configure
 $ sudo make install
 ~~~
