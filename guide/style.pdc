@@ -328,11 +328,11 @@ function isPercentage(val) {
 
 ~~~ {.javascript}
 function isPercentage(val) {
-  if (val < 0) {
-    if (val > 100) {
-      return false;
-    } else {
+  if (val >= 0) {
+    if (val < 100) {
       return true;
+    } else {
+      return false;
     }
   } else {
     return false;
