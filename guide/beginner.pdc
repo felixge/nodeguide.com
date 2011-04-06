@@ -1,9 +1,9 @@
 % Felix's Node.js Beginners Guide
 
 There is lots of information about node.js, but given the rapid pace at which it
-is developed, it can be difficult for beginners to find current and good
-information on how to get started. This guide aims at providing exactly that,
-while staying updated with the latest stable version of node.js.
+is developing, it can be difficult for beginners to find good, current
+information on how to get started. This guide aims to provide exactly that,
+whilst staying updated with the latest stable version of node.js.
 
 This guide has been updated to reflect the latest changes in node 0.4.x, the
 currently stable branch of node.js.
@@ -27,7 +27,7 @@ simple hello world http server.
 First of all: You should run a *nix operating system in order to use node.js at
 this point. Linux and OSX are recommended, but you should also be able to use
 FreeBSD and cygwin (on windows). A full windows port of node.js is in the works,
-but not ready for public usage yet.
+but it is not yet ready for public usage.
 
 The most common way to install node.js is to directly compile it from the
 downloaded source code. There are also various packages available for different
@@ -117,8 +117,8 @@ $ node hello_http.js
 
 The first thing you'll notice is that this program, unlike our first one,
 doesn't exit right away. That's because a node program will always run until
-it's certain that there are no events to be possible. In this case the open http
-server is the source of events that keeps things going.
+it's certain that no further events are possible. In this case the open http
+server is the source of events that will keep things going.
 
 Testing the server is as simple as opening a new browser tab, and navigating to
 the following url: [http://localhost:8080/](http://localhost:8080/). As
@@ -220,11 +220,11 @@ non-core modules, such as 'mysql'?
 var mysql = require('mysql');
 ~~~
 
-In this case node.js will look at every directory, beginning with the one of the
-current file, and check if there is a folder called 'node_modules'. If such a
-folder is found, node.js will look into this folder for a file called
-'mysql.js'. If no matching file is found and the directory root '/' is reached,
-node.js will give up and throw an exception.
+In this case node.js will walk up the directory tree, moving through each
+parent directory in turn, checking in each to see if there is a folder called
+'node_modules'. If such a folder is found, node.js will look into this folder
+for a file called 'mysql.js'. If no matching file is found and the directory
+root '/' is reached, node.js will give up and throw an exception.
 
 At this point node.js also considers an additional, mutable list of alternative
 include directories which are accessible through the `require.paths` array.

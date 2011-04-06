@@ -1,13 +1,13 @@
 % Felix's Node.js Convincing the boss guide
 
 Now that you're all hyped up about using node.js, it's time to convince your
-boss. Well, maybe. I had the pleasure of [consulting][consulting] for different
-businesses on whether node.js is the right technology, and sometimes the answer
-is simply no.
+boss. Well, maybe. I have had the pleasure of [consulting][consulting] for
+different businesses on whether node.js is the right technology, and sometimes
+the answer is simply no.
 
 So this guide is my opinionated collection of advice for those of you that want
-to explore if node.js makes sense for their business, and if so, how to convince
-the management.
+to explore whether node.js makes sense for their business, and if so, how to 
+convince the management.
 
 [consulting]: http://debuggable.com/
 
@@ -15,7 +15,7 @@ the management.
 
 ### CPU heavy apps
 
-Even so I love node.js, there are several use cases where it simply doesn't make
+Even though I love node.js, there are several use cases where it simply doesn't make
 sense. The most obvious such case is apps that are very heavy on CPU usage, and
 very light on actual I/O. So if you're planning to write video encoding
 software, artificial intelligence or similar CPU hungry software, please do not
@@ -127,7 +127,7 @@ career.
 
 This means that you get a huge and diverse pool of people you can hire, and you
 probably already have plenty of talent in your own company. So if you're working
-for a growing company, this is a strong argument favoring node.js.
+for a growing company, this is a strong argument favouring node.js.
 
 [lingua franca]: http://en.wikipedia.org/wiki/Lingua_franca
 

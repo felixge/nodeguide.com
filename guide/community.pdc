@@ -1,7 +1,7 @@
 % Felix's Node.js Community Guide
 
 If you have just read the Beginner's Guide, and you are interested in becoming
-more involed with the node.js community, this guide is for you.
+more involved with the node.js community, this guide is for you.
 
 ## IRC
 
@@ -14,8 +14,8 @@ people in there these days.
 
 If you have a question, just go ahead and ask it. Depending on who's awake and
 paying attention, you often get great replies right away. Otherwise just stick
-around and wait for an hour or so. After that it's ok to ask your question again
-in case you think it went by unnoticed.
+around and wait for an hour or so. After that it's ok to ask your question
+again, in case you think it went by unnoticed.
 
 Oh, and you should always try to find your answer on the web first, but you [know
 that][lmgtfy], right?
@@ -64,7 +64,7 @@ questions right away, there are usually other people around who can help as
 well.
 
 Ryan is currently working for [Joyent][joyent], a company that provides great
-heroku-style [node.js hosting][nodehosting], and is the official coporate
+heroku-style [node.js hosting][nodehosting], and is the official corporate
 sponsor for node.js.
 
 [bdfl]: http://en.wikipedia.org/wiki/BDFL
@@ -120,7 +120,7 @@ node.js libraries.
 
 Tim is the original author of [connect][connect], and has been contributing to
 node.js since the early days. He currently works for HP (formerly Palm), and
-is also known for collaborative blog [howtonode.org][howtonode].
+is also known for the collaborative blog [howtonode.org][howtonode].
 
 * IRC Nick: creationix
 * Twitter: [@creationix](http://twitter.com/creationix)
@@ -151,8 +151,8 @@ providing file uploading & video encoding as a service called
 
 ### Mikeal Rogers
 
-Mikeal is the author of [request][request], and is also very active in the
-development of node.js as well as the community.
+Mikeal is the author of [request][request], and is very active in the
+development of node.js, as well as the community.
 
 * IRC Nick: mikeal
 * Twitter: [@mikeal](http://twitter.com/mikeal)
@@ -197,7 +197,7 @@ also running a node.js startup called [DocumentCloud][].
 
 Jed is a japanese translator who moonlights as a JavaScript ninja. His node.js
 framework [fab.js][fabjs] takes a radical new approach to structuring your JS
-code, and includes all kinds of suprising aspects, exceeding most people's
+code, and includes all kinds of surprising aspects, exceeding most people's
 understanding of JavaScript by far.
 
 * IRC Nick: jedschmidt
@@ -211,10 +211,10 @@ understanding of JavaScript by far.
 ### Marak Squires
 
 Marak who goes by the alias Jim Bastard, is mostly known for pumping out
-douzands of node.js libraries per month, an ability only exceeded by his artful
+dozens of node.js libraries per month, an ability only exceeded by his artful
 use of profanity and trolling people. Don't get upset if he rubs you the wrong
 way, he's a nice guy, but you just shouldn't challenge him to a Monkey Island
-style sword duell.
+style sword duel.
 
 * IRC Nick: jimbastard
 * Twitter: [@maraksquires](http://twitter.com/maraksquires)

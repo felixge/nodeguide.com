@@ -7,22 +7,22 @@ will allow you to create beautiful and consistent software.
 This guide assumes that you are only targeting node.js. If your code also needs
 to run in the browser or other environments, please ignore some of it.
 
-Please also note that node.js as well as various packages for it each have
-their slightly own styles. So if you're interested in contributing to those,
-play by their rules.
+Please also note that node.js, as well as various packages for it, have
+their own slightly different styles. So if you're interested in contributing
+to those, play by their rules.
 
 ## Tabs vs Spaces
 
-Let's start with the religious problems first. Our [benevolant dictator][ryah]
+Let's start with the religious problems first. Our [benevolent dictator][ryah]
 has chosen 2 space indention for the node core, so you would do well to follow
-his orders.
+his choice.
 
 [ryah]: community.html#ryan-dahl
 
 ## Semicolons
 
 There are [rebellious forces][isaac] that try to steal your semicolons from
-you. But make no mistake, our traditional culture is still [well and
+you. But make no mistake, our traditional culture is still [well and truly
 alive][hnsemicolons]. So follow the community, and use those semicolons!
 
 [isaac]: community.html#isaac-schlueter
@@ -36,7 +36,8 @@ executing the currently open file with node.js will come in very handy. While
 [BDFL][bdfl] and your grandpa will also approve.
 
 I'm typing this document in Notes on my iPad, but that's because I'm on a beach
-in Thailand, your work environment may impact your choice of editors as well.
+in Thailand. It's likely that your own work environment will impact your choice
+of editor as well.
 
 [vim]: http://www.vim.org/
 [bdfl]: http://en.wikipedia.org/wiki/BDFL
@@ -45,8 +46,8 @@ in Thailand, your work environment may impact your choice of editors as well.
 
 Just like you brush your teeth after every meal, you clean up any trailing
 whitespace in your JavaScript files before committing. Otherwise the rotten
-smell of careless neglect will drive away any contributors or co-workers after a
-while.
+smell of careless neglect will eventually drive away contributors and/or
+co-workers.
 
 ## Line length
 
@@ -91,7 +92,7 @@ if (true)
 }
 ~~~
 
-Also notice the usage of spaces before and after the condition statement.
+Also, notice the use of whitespace before and after the condition statement.
 
 ## Variable declarations
 
@@ -414,10 +415,10 @@ Crazy shit that you will probably never need. Stay away from it.
 Do not use setters, they cause more problems for people who try to use your
 software than they can solve.
 
-Feel free to use getters that are free of [side effects][sideffect], like
+Feel free to use getters that are free from [side effects][sideeffect], like
 providing a length property for a collection class.
 
-[sideffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
+[sideeffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
 
 ## EventEmitters
 
@@ -435,13 +436,13 @@ class to emit events. This is basically a simple implementation of the
 [Observer pattern]: http://en.wikipedia.org/wiki/Observer_pattern
 
 However, I strongly recommend that you never listen to the events of your own
-class from within it. It's not natural for an object to observe itself. It often
-leads to undesirable exposure of internal implementation details, and makes
-your code more difficult to follow along.
+class from within it. It isn't natural for an object to observe itself. It often
+leads to undesirable exposure to implementation details, and makes your code
+more difficult to follow.
 
 ## Inheritance / Object oriented programming
 
-Inheritance and object oriented programming are a whole subject by themselves.
+Inheritance and object oriented programming are subjects by themselves.
 If you're interested in following this popular programming model, please read my
 [Object oriented programming guide][].
 
