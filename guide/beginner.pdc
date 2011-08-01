@@ -167,7 +167,7 @@ hello.world();
 
 As you have probably guessed, the `require('./hello')` is used to import the
 contents from another JavaScript file. The initial './' indicates that the file
-is located in the same directory 'main.js'. Also note that you don't have to
+is located in the same directory as 'main.js'. Also note that you don't have to
 provide the file extension, as '.js' is assumed by default.
 
 So let's go ahead and create our 'hello.js' file, with the following content:
