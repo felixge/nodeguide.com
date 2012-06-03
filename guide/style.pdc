@@ -144,7 +144,7 @@ var adminUser = db.query('SELECT * FROM users ...');
 *Wrong:*
 
 ~~~ {.javascript}
-var admin_user = d.query('SELECT * FROM users ...');
+var admin_user = db.query('SELECT * FROM users ...');
 ~~~
 
 [camelcase]: http://en.wikipedia.org/wiki/camelCase#Variations_and_synonyms
