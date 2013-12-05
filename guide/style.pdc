@@ -1,5 +1,8 @@
 % Felix's Node.js Style Guide
 
+<strong style="font-size: 30px; color: red;">IMPORTANT:</strong> This version is outdated, the
+latest version is available on [GitHub](https://github.com/felixge/node-style-guide).
+
 There is no official document that governs the style of node.js applications.
 This guide is my opinionated attempt to bring you a good set of instructions that
 will allow you to create beautiful and consistent software.
