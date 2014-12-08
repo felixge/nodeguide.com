@@ -1,10 +1,11 @@
 GUIDES = $(notdir $(wildcard guide/*.pdc))
 HTML_GUIDES = $(addprefix public/,$(GUIDES:.pdc=.html))
 PANDOC_DEFAULT_OPTIONS = \
-		-5 \
+		--to html5 \
 		-c css/screen.css \
 		-B template/header.html \
-		-A template/footer.html
+		-A template/footer.html \
+		-H template/meta.html
 PANDOC_GUIDE_OPTIONS = \
 		-B template/navigation.html \
 		--toc

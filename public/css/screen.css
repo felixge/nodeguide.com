@@ -1,3 +1,22 @@
+@media only screen and (min-width: 1224px){
+  .container{
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (orientation: portrait){
+  code{
+      white-space: pre-wrap; /* No code overlap */
+  }
+}
+
+@media only screen and (orientation: landscape){
+  code{
+      white-space: pre-wrap;
+  }
+}
+
 body{
   font-family: Georgia,serif;
 }
@@ -12,11 +31,6 @@ a{
 
 a:visited{
   color: #B950B7;
-}
-
-.container{
-  width: 960px;
-  margin: 0 auto;
 }
 
 .shell, pre.sourceCode{
@@ -41,7 +55,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover{
   text-decoration: underline;
 }
 
-code.sourceCode span.kw { color: #C6C5FE; font-weight: bold; } 
+code.sourceCode span.kw { color: #C6C5FE; font-weight: bold; }
 code.sourceCode span.dt { color: #fff; }
 code.sourceCode span.dv { color: #FF73FD; }
 code.sourceCode span.bn { color: #40a070; }
