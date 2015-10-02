@@ -372,7 +372,7 @@ If nothing else, fab.js shows the world that JavaScript doesn't have to copy
 Ruby, Python or PHP when it comes to web frameworks, and can go its own unique
 ways.
 
-[fabjs]: http://fabjs.org/
+[fabjs]: https://github.com/jed/fab
 
 ## Hosting & Deployment
 
