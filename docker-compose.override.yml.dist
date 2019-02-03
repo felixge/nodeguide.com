@@ -1,0 +1,4 @@
+web:
+  build: .
+  ports:
+    - 8080:80 # override port 80 which will typically be used for local Apache/ Nginx

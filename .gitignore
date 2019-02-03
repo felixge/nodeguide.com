@@ -2,3 +2,5 @@
 !/public/css
 
 *.un~
+# don't store user's override file in git
+docker-compose.override.yml
